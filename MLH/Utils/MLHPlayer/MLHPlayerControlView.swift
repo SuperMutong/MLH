@@ -50,6 +50,7 @@ class MLHPlayerControlView: UIView,UIGestureRecognizerDelegate {
     fileprivate lazy var titleLabel:UILabel = {
         let label:UILabel = UILabel()
         label.textColor = UIColor.white
+        label.text = "测试数据"
         label.font = UIFont.systemFont(ofSize: 15)
         return label
     }()
@@ -64,6 +65,7 @@ class MLHPlayerControlView: UIView,UIGestureRecognizerDelegate {
     //当前播放时长 label
     fileprivate lazy var currentTimeLabel:UILabel = {
         let label:UILabel = UILabel()
+        label.text = "123123"
         label.textColor = UIColor.white
         label.font = UIFont.systemFont(ofSize: 12)
         label.textAlignment = .center
@@ -72,6 +74,7 @@ class MLHPlayerControlView: UIView,UIGestureRecognizerDelegate {
     //视频总时间 label
     fileprivate lazy var totalTimeLabel:UILabel = {
         let lab:UILabel = UILabel()
+        lab.text = "2113234"
         lab.textColor = UIColor.white
         lab.font = UIFont.systemFont(ofSize: 12)
         lab.textAlignment = .center
@@ -86,7 +89,7 @@ class MLHPlayerControlView: UIView,UIGestureRecognizerDelegate {
     }()
     //滑竿
     fileprivate lazy var videoSlider:UISlider = {
-        let slider = UISlider()
+        let slider:UISlider = UISlider()
         slider.setThumbImage(UIImage(named:"ZFPlayer_slider"), for: .normal)
         slider.maximumValue = 1
         slider.minimumTrackTintColor = UIColor.white
@@ -98,13 +101,13 @@ class MLHPlayerControlView: UIView,UIGestureRecognizerDelegate {
         let sliderTap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapSliderAction(tap:)))
         slider.addGestureRecognizer(sliderTap)
         
-        let panRecognizer:UIPanGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(panRecognizer(pan:)))
-        panRecognizer.delegate = self
-        panRecognizer.maximumNumberOfTouches = 1
-        panRecognizer.delaysTouchesBegan = true
-        panRecognizer.delaysTouchesEnded = true
-        panRecognizer.cancelsTouchesInView = true
-        slider.addGestureRecognizer(panRecognizer)
+//        let panRecognizer:UIPanGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(panRecognizer(pan:)))
+//        panRecognizer.delegate = self
+//        panRecognizer.maximumNumberOfTouches = 1
+//        panRecognizer.delaysTouchesBegan = true
+//        panRecognizer.delaysTouchesEnded = true
+//        panRecognizer.cancelsTouchesInView = true
+//        slider.addGestureRecognizer(panRecognizer)
         return slider
     }()
     //全屏按钮
@@ -151,20 +154,22 @@ class MLHPlayerControlView: UIView,UIGestureRecognizerDelegate {
         let btn:UIButton = UIButton(type: .custom)
         btn.setImage(UIImage(named: "ZFPlayer_repeat_video"), for: .normal)
         btn.addTarget(self, action: #selector(repeatBtnClick(btn:)), for: .touchUpInside)
+        btn.isHidden = true
         return btn
     }()
     //bottomView
     fileprivate var bottomImageView:UIImageView = {
         let imageView:UIImageView = UIImageView(image: UIImage(named: "ZFPlayer_bottom_shadow"))
         imageView.isUserInteractionEnabled = true
-        imageView.alpha = 0.0
+//        imageView.alpha = 0.0
+        
         return imageView
     }()
     //topView
     fileprivate var topImageView:UIImageView = {
         let imageView:UIImageView = UIImageView(image: UIImage(named: "ZFPlayer_top_shadow"))
         imageView.isUserInteractionEnabled = true
-        imageView.alpha = 0.0
+//        imageView.alpha = 0.0
         return imageView
     }()
     //缓存 btn
@@ -189,6 +194,7 @@ class MLHPlayerControlView: UIView,UIGestureRecognizerDelegate {
         let btn:UIButton = UIButton(type: .custom)
         btn.setImage(UIImage(named: "ZFPlayer_play_btn"), for: .normal)
         btn.addTarget(self, action: #selector(centerPlayBtnClick(btn:)), for: .touchUpInside)
+        btn.isHidden = true
         return btn
     }()
     //加载失败按钮
@@ -199,15 +205,17 @@ class MLHPlayerControlView: UIView,UIGestureRecognizerDelegate {
         failbtn.titleLabel?.font = UIFont.systemFont(ofSize: 14.0)
         failbtn.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.7)
         failbtn.addTarget(self, action: #selector(failBtnClick(btn:)), for: .touchUpInside)
+        failbtn.isHidden = true
         return failbtn
     }()
     //快进快退 view
     fileprivate var fastView:UIView = {
-        let fastView:UIView = UIView()
-        fastView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.8)
-        fastView.layer.cornerRadius = 4
-        fastView.layer.masksToBounds = true
-        return fastView
+        let view:UIView = UIView()
+        view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.8)
+        view.layer.cornerRadius = 4
+        view.layer.masksToBounds = true
+//        view.isHidden = true
+        return view
     }()
     //快进快退进度 progress
     fileprivate var fastProgressView:UIProgressView = {
@@ -221,6 +229,7 @@ class MLHPlayerControlView: UIView,UIGestureRecognizerDelegate {
         let label = UILabel()
         label.textColor = UIColor.white
         label.textAlignment = .center
+        label.text = "123"
         label.font = UIFont.systemFont(ofSize: 14)
         return label
     }()
@@ -254,7 +263,115 @@ extension MLHPlayerControlView{
         }
         self.closeBtn.snp.makeConstraints { (make) in
             make.trailing.equalTo(self.snp.trailing).offset(7)
-            
+            make.top.equalTo(self.snp.top).offset(-7)
+            make.width.height.equalTo(20)
+        }
+        self.topImageView.snp.makeConstraints { (make) in
+            make.leading.trailing.equalTo(self)
+            make.top.equalTo(self.snp.top).offset(0)
+            make.height.equalTo(50)
+        }
+        self.backBtn.snp.makeConstraints { (make) in
+            make.leading.equalTo(self.topImageView.snp.leading).offset(10)
+            make.top.equalTo(self.topImageView.snp.top).offset(3)
+            make.width.height.equalTo(40)
+        }
+        self.downLoadBtn.snp.makeConstraints { (make) in
+            make.width.equalTo(40)
+            make.height.equalTo(49)
+            make.trailing.equalTo(self.topImageView.snp.trailing).offset(-10)
+            make.centerY.equalTo(self.backBtn.snp.centerY)
+        }
+        self.resolutionBtn.snp.makeConstraints { (make) in
+            make.width.equalTo(40)
+            make.height.equalTo(25)
+            make.trailing.equalTo(self.downLoadBtn.snp.leading).offset(-10)
+            make.centerY.equalTo(self.backBtn.snp.centerY)
+        }
+        self.titleLabel.snp.makeConstraints { (make) in
+            make.leading.equalTo(self.backBtn.snp.trailing).offset(5)
+            make.centerY.equalTo(self.backBtn.snp.centerY)
+            make.trailing.equalTo(self.resolutionBtn.snp.leading).offset(-10)
+        }
+        self.bottomImageView.snp.makeConstraints { (make) in
+            make.leading.trailing.bottom.equalTo(0)
+            make.height.equalTo(50)
+        }
+        self.startBtn.snp.makeConstraints { (make) in
+            make.leading.equalTo(self.bottomImageView.snp.leading).offset(5)
+            make.bottom.equalTo(self.bottomImageView.snp.bottom).offset(-5)
+            make.width.height.equalTo(30)
+        }
+        self.currentTimeLabel.snp.makeConstraints { (make) in
+            make.leading.equalTo(self.startBtn.snp.trailing).offset(-3)
+            make.centerY.equalTo(self.startBtn.snp.centerY)
+            make.width.equalTo(43)
+        }
+        self.fullScreenBtn.snp.makeConstraints { (make) in
+            make.width.height.equalTo(30)
+            make.trailing.equalTo(self.bottomImageView.snp.trailing).offset(-5)
+            make.centerY.equalTo(self.startBtn.snp.centerY)
+        }
+        self.totalTimeLabel.snp.makeConstraints { (make) in
+            make.trailing.equalTo(self.fullScreenBtn.snp.leading).offset(3)
+            make.centerY.equalTo(self.startBtn.snp.centerY)
+            make.width.equalTo(43)
+        }
+        self.progressView.snp.makeConstraints { (make) in
+            make.leading.equalTo(self.currentTimeLabel.snp.trailing).offset(4)
+            make.trailing.equalTo(self.totalTimeLabel.snp.leading).offset(-4)
+            make.centerY.equalTo(self.startBtn.snp.centerY)
+        }
+        self.videoSlider.snp.makeConstraints { (make) in
+            make.leading.equalTo(self.currentTimeLabel.snp.trailing).offset(4)
+            make.trailing.equalTo(self.totalTimeLabel.snp.leading).offset(-4)
+            make.centerY.equalTo(self.currentTimeLabel.snp.centerY)
+            make.height.equalTo(30)
+        }
+        self.lockBtn.snp.makeConstraints { (make) in
+            make.leading.equalTo(self.snp.leading).offset(15)
+            make.centerY.equalTo(self.snp.centerY)
+            make.height.width.equalTo(32)
+        }
+        self.repeatBtn.snp.makeConstraints { (make) in
+            make.center.equalTo(self)
+        }
+        self.playBtn.snp.makeConstraints { (make) in
+            make.width.height.equalTo(50)
+            make.center.equalTo(self)
+        }
+        self.activity.snp.makeConstraints { (make) in
+            make.center.equalTo(self)
+            make.width.height.equalTo(45)
+        }
+        self.failBtn.snp.makeConstraints { (make) in
+            make.center.equalTo(self)
+            make.width.equalTo(130)
+            make.height.equalTo(33)
+        }
+        self.fastView.snp.makeConstraints { (make) in
+            make.width.equalTo(125)
+            make.height.equalTo(80)
+            make.center.equalTo(self)
+        }
+        self.fastImageView.snp.makeConstraints { (make) in
+            make.width.equalTo(32)
+            make.height.equalTo(32)
+            make.top.equalTo(5)
+            make.centerX.equalTo(self.fastView.snp.centerX)
+        }
+        self.fastTimeLabel.snp.makeConstraints { (make) in
+            make.leading.trailing.equalTo(0)
+            make.top.equalTo(self.fastImageView.snp.bottom).offset(2)
+        }
+        self.fastProgressView.snp.makeConstraints { (make) in
+            make.leading.equalTo(12)
+            make.trailing.equalTo(-12)
+            make.top.equalTo(self.fastTimeLabel.snp.bottom).offset(10)
+        }
+        self.bottomProgressView.snp.makeConstraints { (make) in
+            make.leading.trailing.equalTo(0)
+            make.bottom.equalTo(0)
         }
     }
     
@@ -271,20 +388,23 @@ extension MLHPlayerControlView{
         self.bottomImageView.addSubview(self.totalTimeLabel)
         
         self.topImageView.addSubview(self.downLoadBtn)
-        self.addSubview(self.lockBtn)
         self.topImageView.addSubview(self.backBtn)
+        self.topImageView.addSubview(self.resolutionBtn)
+        self.topImageView.addSubview(self.titleLabel)
+        
+        self.addSubview(self.lockBtn)
         self.addSubview(self.activity)
         self.addSubview(self.repeatBtn)
         self.addSubview(self.playBtn)
         self.addSubview(self.failBtn)
         
         self.addSubview(self.fastView)
+        
         self.fastView.addSubview(self.fastImageView)
         self.fastView.addSubview(self.fastTimeLabel)
         self.fastView.addSubview(self.fastProgressView)
         
-        self.topImageView.addSubview(self.resolutionBtn)
-        self.topImageView.addSubview(self.titleLabel)
+ 
         self.addSubview(self.closeBtn)
         self.addSubview(self.bottomProgressView)
     }

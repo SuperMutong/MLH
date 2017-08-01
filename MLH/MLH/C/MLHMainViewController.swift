@@ -16,20 +16,45 @@ class MLHMainViewController: MLHBaseViewController {
 
         // Do any additional setup after loading the view.
         let sing:Singleton = Singleton.shared
-        
+        self.navigationController?.navigationBar.isHidden = true
 //        let player:MLHPlayer = MLHPlayer.shared
 //        player.playerView = MLHPlayerView()
 //        view.addSubview(player.playerView!)
         
-        
+//        
 //        let btn:UIButton = UIButton(type: .custom)
 //        btn.backgroundColor = UIColor.red
 //        self.view.addSubview(btn)
-//
 //        btn.snp.makeConstraints { (make) in
-//            make.edges.equalToSuperview().inset(UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0) as! ConstraintOffsetTarget)
+//            make.edges.equalToSuperview().inset(UIEdgeInsetsMake(0, 0, 0, 0))
 //        }
+//        
+//        let view:UIView = UIView()
+//        view.backgroundColor = UIColor.white
+//        btn.addSubview(view)
+//        
+//        
+//        view.snp.makeConstraints { (make) in
+//            make.trailing.equalTo(view.snp.trailing).offset(7)
+//            make.top.equalTo(view.snp.top).offset(-7)
+//            make.width.height.equalTo(20)
+//        }
+        
+        let view:MLHPlayerControlView = MLHPlayerControlView()
+         self.view.addSubview(view)
+        view.snp.makeConstraints { (make) in
+            make.trailing.leading.top.equalTo(0)
+            make.height.equalTo(200)
+        }
 
+        
+//        let slider:UISlider = UISlider(frame: CGRect(x: 0, y: 300, width: KScreenWidth, height: 30))
+//        slider.setThumbImage(UIImage(named:"ZFPlayer_slider"), for: .normal)
+//        slider.maximumValue = 1
+//        slider.minimumTrackTintColor = UIColor.white
+//        slider.maximumTrackTintColor = UIColor(0.5, g: 0.5, b: 0.5, a: 0.5)
+//     
+//        self.view.addSubview(slider)
     }
  
     @IBAction func pushAction(_ sender: Any) {

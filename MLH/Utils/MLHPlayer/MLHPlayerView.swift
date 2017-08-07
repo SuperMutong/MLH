@@ -196,8 +196,8 @@ extension MLHPlayerView{
      state = MLHPlayerState.MLHPlayerStateBuffering
      isLocalVideo = false
     
-     self.controlView?.playerDownloadBtn(state: true)
-     self.play()
+//     self.controlView?.playerDownloadBtn(state: true)
+    self.play()
      self.isPauseByUser = false
     }
     

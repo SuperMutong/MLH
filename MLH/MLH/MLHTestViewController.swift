@@ -8,6 +8,11 @@
 
 import UIKit
 
+
+
+
+
+
 class MLHTestViewController: MLHBaseViewController {
     let volumeView:MLHVolumeView = {
         let view = MLHVolumeView(frame: CGRect(x: 100, y: 100, width: 100, height: 100))

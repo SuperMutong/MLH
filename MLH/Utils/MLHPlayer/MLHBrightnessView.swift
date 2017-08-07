@@ -12,13 +12,6 @@ public final class MLHBrightness{
     private static let _shared = MLHBrightness()
     private init(){}
     var playerView:MLHBrightnessView?
-    public static var shared:MLHBrightness{
-        return _shared
-    }
-}
-
-
-class MLHBrightnessView: UIView {
     //是否锁定屏幕方向
     var isLockScreen:Bool?
     //是否允许横屏, 来控制只有竖屏的状态
@@ -34,6 +27,14 @@ class MLHBrightnessView: UIView {
     }
     //是否是横屏状态
     var isLandscape:Bool?
+    public static var shared:MLHBrightness{
+        return _shared
+    }
+}
+
+
+class MLHBrightnessView: UIView {
+
     
     fileprivate var backImage:UIImageView?
     fileprivate var title:UILabel?

@@ -24,6 +24,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Masonry.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-MLH.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -49,10 +54,20 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ZFPlayer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>273F099957E8B3A5008553344A7DB0F4</key>
+		<key>16A07CADA12983999E51CC889191C53F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2428CE675EE2BA2293B93534D77FBBE1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,17 +77,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2F29C6C49E63800095292BF0B1F4B6FF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>41FA54D12162DAD51D02FC58A2CD5034</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7C11D85DFE5F4F7B4B2D79BDBE3A7180</key>
+		<key>4633CB25335EDE084D2B5C6EE91237F0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5F1B8CD22A8C3D11672323B5C98955B9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,7 +97,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A833469331693C5D59D2773367629F4C</key>
+		<key>C30ECB064327E611AC75FC0DBD3CD320</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D52144DE9D7255DE912490FF5A806573</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,7 +112,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F791EF54C9EC865236606FF05C041DA7</key>
+		<key>F84955C9B8AF135440E3659B58362686</key>
 		<dict>
 			<key>primary</key>
 			<true/>

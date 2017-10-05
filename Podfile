@@ -2,6 +2,7 @@ platform :ios, '10.0'
 use_frameworks!
 
 target 'MLH' do
+   pod 'ZFPlayer', '~> 2.1.3'
    pod 'Alamofire', '~> 4.4'
    pod 'SwiftyJSON', '~> 3.1.4'
    pod 'HandyJSON', '~> 1.7.1'

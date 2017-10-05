@@ -9,18 +9,29 @@
 import UIKit
 import SnapKit
 
+
+
+
 class MLHMainViewController: MLHBaseViewController {
     var hs:String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view
-
     }
+    func singleTapAction(tap:UITapGestureRecognizer){
+        
+        if tap is NSNumber.Type {
+            print(tap)
+        }
+        else{
+            print(tap)
+        }
+    }
+    
     @IBAction func pushAction(_ sender: Any) {
-        let vc = MLHTestViewController()
-        vc.hidesBottomBarWhenPushed = true
-        navigationController?.pushViewController(vc, animated: true)
+        self.perform(#selector(singleTapAction(tap:)), with:true)
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

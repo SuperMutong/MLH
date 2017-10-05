@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		59CAAA0E40EC4539E1945814 /* Pods_MLH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2478D24F196B16A9813FEA78 /* Pods_MLH.framework */; };
-		7696A8311F38060400B6BCD8 /* MLHPlayerShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7696A8301F38060400B6BCD8 /* MLHPlayerShared.swift */; };
 		76DA8B891F30217F00B5BA17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DA8B881F30217F00B5BA17 /* AppDelegate.swift */; };
 		76DA8B901F30217F00B5BA17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76DA8B8F1F30217F00B5BA17 /* Assets.xcassets */; };
 		76DA8B931F30217F00B5BA17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76DA8B911F30217F00B5BA17 /* LaunchScreen.storyboard */; };
@@ -43,12 +42,6 @@
 		76DA8C401F30223700B5BA17 /* MLHTVTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DA8C191F30223700B5BA17 /* MLHTVTableViewCell.swift */; };
 		76DA8C411F30223700B5BA17 /* MLHTVTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76DA8C1A1F30223700B5BA17 /* MLHTVTableViewCell.xib */; };
 		76DA8C421F30223700B5BA17 /* MLHTVVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DA8C1C1F30223700B5BA17 /* MLHTVVM.swift */; };
-		76DA8C431F30223700B5BA17 /* MLHBrightnessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DA8C1F1F30223700B5BA17 /* MLHBrightnessView.swift */; };
-		76DA8C441F30223700B5BA17 /* MLHPlayerControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DA8C201F30223700B5BA17 /* MLHPlayerControlView.swift */; };
-		76DA8C451F30223700B5BA17 /* MLHPlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DA8C211F30223700B5BA17 /* MLHPlayerModel.swift */; };
-		76DA8C461F30223700B5BA17 /* MLHPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DA8C221F30223700B5BA17 /* MLHPlayerView.swift */; };
-		76DA8C471F30223700B5BA17 /* MLHVolumeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DA8C231F30223700B5BA17 /* MLHVolumeView.swift */; };
-		76DA8C481F30223700B5BA17 /* MMMaterialDesignSpinner.m in Sources */ = {isa = PBXBuildFile; fileRef = 76DA8C251F30223700B5BA17 /* MMMaterialDesignSpinner.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +65,6 @@
 		2478D24F196B16A9813FEA78 /* Pods_MLH.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MLH.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30B40B92290EB53C4BDEE212 /* Pods-MLH.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLH.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MLH/Pods-MLH.debug.xcconfig"; sourceTree = "<group>"; };
 		7470A0204B662C7E610F4D6F /* Pods-MLH.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLH.release.xcconfig"; path = "Pods/Target Support Files/Pods-MLH/Pods-MLH.release.xcconfig"; sourceTree = "<group>"; };
-		7696A8301F38060400B6BCD8 /* MLHPlayerShared.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLHPlayerShared.swift; sourceTree = "<group>"; };
 		76DA8B851F30217F00B5BA17 /* MLH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MLH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76DA8B881F30217F00B5BA17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76DA8B8F1F30217F00B5BA17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -114,13 +106,6 @@
 		76DA8C191F30223700B5BA17 /* MLHTVTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLHTVTableViewCell.swift; sourceTree = "<group>"; };
 		76DA8C1A1F30223700B5BA17 /* MLHTVTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MLHTVTableViewCell.xib; sourceTree = "<group>"; };
 		76DA8C1C1F30223700B5BA17 /* MLHTVVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLHTVVM.swift; sourceTree = "<group>"; };
-		76DA8C1F1F30223700B5BA17 /* MLHBrightnessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLHBrightnessView.swift; sourceTree = "<group>"; };
-		76DA8C201F30223700B5BA17 /* MLHPlayerControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLHPlayerControlView.swift; sourceTree = "<group>"; };
-		76DA8C211F30223700B5BA17 /* MLHPlayerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLHPlayerModel.swift; sourceTree = "<group>"; };
-		76DA8C221F30223700B5BA17 /* MLHPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLHPlayerView.swift; sourceTree = "<group>"; };
-		76DA8C231F30223700B5BA17 /* MLHVolumeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLHVolumeView.swift; sourceTree = "<group>"; };
-		76DA8C241F30223700B5BA17 /* MMMaterialDesignSpinner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMMaterialDesignSpinner.h; sourceTree = "<group>"; };
-		76DA8C251F30223700B5BA17 /* MMMaterialDesignSpinner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMMaterialDesignSpinner.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,8 +182,8 @@
 				76DA8C001F30223700B5BA17 /* Main */,
 				76DA8C051F30223700B5BA17 /* Me */,
 				76DA8C091F30223700B5BA17 /* MLH */,
-				76DA8C101F30223700B5BA17 /* NetworkLayer */,
 				76DA8C141F30223700B5BA17 /* TV */,
+				76DA8C101F30223700B5BA17 /* NetworkLayer */,
 				76DA8B881F30217F00B5BA17 /* AppDelegate.swift */,
 				76DA8B8F1F30217F00B5BA17 /* Assets.xcassets */,
 				76DA8B911F30217F00B5BA17 /* LaunchScreen.storyboard */,
@@ -371,24 +356,8 @@
 		76DA8C1D1F30223700B5BA17 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				76DA8C1E1F30223700B5BA17 /* MLHPlayer */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		76DA8C1E1F30223700B5BA17 /* MLHPlayer */ = {
-			isa = PBXGroup;
-			children = (
-				76DA8C1F1F30223700B5BA17 /* MLHBrightnessView.swift */,
-				76DA8C201F30223700B5BA17 /* MLHPlayerControlView.swift */,
-				76DA8C211F30223700B5BA17 /* MLHPlayerModel.swift */,
-				76DA8C221F30223700B5BA17 /* MLHPlayerView.swift */,
-				76DA8C231F30223700B5BA17 /* MLHVolumeView.swift */,
-				76DA8C241F30223700B5BA17 /* MMMaterialDesignSpinner.h */,
-				76DA8C251F30223700B5BA17 /* MMMaterialDesignSpinner.m */,
-				7696A8301F38060400B6BCD8 /* MLHPlayerShared.swift */,
-			);
-			path = MLHPlayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -586,15 +555,11 @@
 				76DA8C421F30223700B5BA17 /* MLHTVVM.swift in Sources */,
 				76DA8C261F30223700B5BA17 /* ArrayExtension.swift in Sources */,
 				76DA8C331F30223700B5BA17 /* MLHBaseViewController.swift in Sources */,
-				76DA8C451F30223700B5BA17 /* MLHPlayerModel.swift in Sources */,
-				76DA8C461F30223700B5BA17 /* MLHPlayerView.swift in Sources */,
 				76DA8C341F30223700B5BA17 /* MLHNavigationViewController.swift in Sources */,
 				76DA8C291F30223700B5BA17 /* MLHCorner.swift in Sources */,
 				76DA8C2A1F30223700B5BA17 /* Observable.swift in Sources */,
 				76DA8C311F30223700B5BA17 /* MLHFindViewController.swift in Sources */,
-				7696A8311F38060400B6BCD8 /* MLHPlayerShared.swift in Sources */,
 				76DA8C2C1F30223700B5BA17 /* SwifterSwift.swift in Sources */,
-				76DA8C431F30223700B5BA17 /* MLHBrightnessView.swift in Sources */,
 				76DA8C301F30223700B5BA17 /* URIDefine.swift in Sources */,
 				76DA8C361F30223700B5BA17 /* MLHMeViewController.swift in Sources */,
 				76DA8C271F30223700B5BA17 /* DispatchTimeExtension.swift in Sources */,
@@ -603,12 +568,9 @@
 				76DA8C3C1F30223700B5BA17 /* HTTPFacade.swift in Sources */,
 				76DA8C2B1F30223700B5BA17 /* Singleton.swift in Sources */,
 				76DA8C3A1F30223700B5BA17 /* MLHTestViewController.swift in Sources */,
-				76DA8C441F30223700B5BA17 /* MLHPlayerControlView.swift in Sources */,
 				76DA8C2D1F30223700B5BA17 /* UIColorExtension.swift in Sources */,
 				76DA8C281F30223700B5BA17 /* ImageTint.swift in Sources */,
 				76DA8C3D1F30223700B5BA17 /* MLHApiInterface.swift in Sources */,
-				76DA8C481F30223700B5BA17 /* MMMaterialDesignSpinner.m in Sources */,
-				76DA8C471F30223700B5BA17 /* MLHVolumeView.swift in Sources */,
 				76DA8C2E1F30223700B5BA17 /* UIViewControllerExtension.swift in Sources */,
 				76DA8B891F30217F00B5BA17 /* AppDelegate.swift in Sources */,
 				76DA8C381F30223700B5BA17 /* MLHMainViewController.swift in Sources */,
@@ -756,6 +718,7 @@
 			baseConfigurationReference = 30B40B92290EB53C4BDEE212 /* Pods-MLH.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = MLH/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zuoyebang.MLH;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -769,6 +732,7 @@
 			baseConfigurationReference = 7470A0204B662C7E610F4D6F /* Pods-MLH.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = MLH/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zuoyebang.MLH;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -12,5 +12,4 @@
 #import <MBProgressHUD/MBProgressHUD.h>
 #import <MJRefresh/MJRefresh.h>
 #import <YYKit/YYKit.h>
-#import "MMMaterialDesignSpinner.h"
 #endif /* MLH_Bridging_Header_h */

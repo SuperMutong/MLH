@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB" customClass="MLHTVHeader" customModule="MLH" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="165"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8bu-Hd-71L">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="165"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="8bu-Hd-71L" secondAttribute="trailing" id="bRy-En-w1A"/>
+                <constraint firstItem="8bu-Hd-71L" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="lsi-fM-GGQ"/>
+                <constraint firstAttribute="bottom" secondItem="8bu-Hd-71L" secondAttribute="bottom" id="n8f-me-leT"/>
+                <constraint firstItem="8bu-Hd-71L" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="rvI-X5-6dr"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="headerImageView" destination="8bu-Hd-71L" id="udL-i6-8fP"/>
+            </connections>
+            <point key="canvasLocation" x="3" y="38"/>
+        </view>
+    </objects>
+</document>

@@ -23,6 +23,10 @@ class MLHBaseViewController: UIViewController,ViewControllerProtocol {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+    
+        self.setNavgationBarImage(image:UIImage.createImage(color: UIColor(hexString: "f5f5f5")!))
+        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName:UIFont.systemFont(ofSize: 17),
+            NSForegroundColorAttributeName:UIColor(hexString: "333333")!]
     }
 
     override func didReceiveMemoryWarning() {

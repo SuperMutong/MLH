@@ -47,6 +47,9 @@ extension ViewControllerProtocol where Self:UIViewController{
         let rightItem:UIBarButtonItem = barWith(image: image, selectedImage: selectedImage, backgroundImage: nil, selectedBackgroundImage: nil, target: target, action: action)
         self.navigationItem.rightBarButtonItem = rightItem
     }
+    func setNavgationBarImage(image:UIImage?){
+        self.navigationController?.navigationBar.setBackgroundImage(image, for: .default)
+    }
     
     func closeTranslucent() {
         self.navigationController?.navigationBar.isTranslucent = false

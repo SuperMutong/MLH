@@ -14,10 +14,13 @@ struct HTTPFacade {
  static let shareInstance = HTTPFacade()
  
  
-    func loadMagicTVData(_ finished:@escaping CompleteBlock)  {
-        self.doHttpRequest(params: [:], url: findmagictv, completeBlock: finished)
+    func loadMagicTVData(params:[String:Any],finished:@escaping CompleteBlock)  {
+        self.doHttpRequest(params: params, url: findmagictv, completeBlock: finished)
+    
     }
+    
     private func doHttpRequest(params:[String:Any] , url:String , completeBlock:@escaping CompleteBlock){
+        print(URL(string: requestURLHeader + url)!)
         Alamofire.request(URL(string: requestURLHeader + url)!, method: .post, parameters: params, encoding: JSONEncoding.default, headers: [:]).responseJSON(completionHandler: { (response) in
             completeBlock(response)
         })

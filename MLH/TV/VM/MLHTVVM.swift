@@ -11,16 +11,44 @@ import SwiftyJSON
 import HandyJSON
 class MLHTVVM {
     var whc:MLHFindMagicTV?
+    var post:[MLHFindMagicTVPosts]
+    var header:MLHFindMagicTV_head?
+    var requestError:Error?
     var reloadSignal:Observable<Bool>
     init() {
+        post = []
         reloadSignal = Observable(false)
     }
     func loadTVData() {
-        HTTPFacade.shareInstance.loadMagicTVData {[weak self] (response) in
+     
+        HTTPFacade.shareInstance.loadMagicTVData(params:["lastid":"0"]) {[weak self] (response) in
             switch response.result {
             case .success(let value):
                 let whc = MLHFindMagicTV.deserialize(from: value as? NSDictionary)
-                self?.whc = whc
+//                self?.whc = whc
+                
+                self?.post += (whc?.data?.posts)!
+                self?.header = (whc?.data?.magictv_head)!
+            case .failure(let error):
+                self?.requestError  = error
+                 print(error)
+            }
+            self?.reloadSignal.value = true
+
+        }
+    }
+    func loadMoreTVData(){
+        if(self.post.count == 0){
+            return;
+        }
+        let post:MLHFindMagicTVPosts = (self.post.last)!
+        HTTPFacade.shareInstance.loadMagicTVData(params:["lastid":post.id ?? "0"]) {[weak self] (response) in
+            switch response.result {
+            case .success(let value):
+                let whc = MLHFindMagicTV.deserialize(from: value as? NSDictionary)
+//                self?.whc = whc
+                self?.post += (whc?.data?.posts)!
+
                 self?.reloadSignal.value = true
             case .failure(let error):
                 print(error)

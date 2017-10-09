@@ -15,22 +15,26 @@ import SnapKit
 class MLHMainViewController: MLHBaseViewController {
     var hs:String?
     
+    @IBOutlet weak var headerView: UIView!
+    @IBOutlet weak var pushBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view
+        let tap = UITapGestureRecognizer(target: self, action: #selector(singleTapAction))
+        self.headerView.addGestureRecognizer(tap)
     }
-    func singleTapAction(tap:UITapGestureRecognizer){
+    func singleTapAction(){
         
-        if tap is NSNumber.Type {
-            print(tap)
-        }
-        else{
-            print(tap)
-        }
+//        if tap is NSNumber.Type {
+//            print(tap)
+//        }
+//        else{
+//            print(tap)
+//        }
     }
     
     @IBAction func pushAction(_ sender: Any) {
-        self.perform(#selector(singleTapAction(tap:)), with:true)
+//        self.perform(#selector(singleTapAction(tap:)), with:true)
         
     }
     override func didReceiveMemoryWarning() {

@@ -10,6 +10,9 @@
 		59CAAA0E40EC4539E1945814 /* Pods_MLH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2478D24F196B16A9813FEA78 /* Pods_MLH.framework */; };
 		760100301F876D2F00A0AF48 /* MLHTVHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7601002F1F876D2F00A0AF48 /* MLHTVHeader.swift */; };
 		760100321F876D6C00A0AF48 /* MLHTVHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 760100311F876D6C00A0AF48 /* MLHTVHeader.xib */; };
+		760100351F87799D00A0AF48 /* MLHPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760100341F87799D00A0AF48 /* MLHPlayerViewController.swift */; };
+		760100391F877A7A00A0AF48 /* MLHWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760100371F877A7A00A0AF48 /* MLHWebViewController.swift */; };
+		760100521F8AF3D700A0AF48 /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760100511F8AF3D700A0AF48 /* HUD.swift */; };
 		76DA8B891F30217F00B5BA17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DA8B881F30217F00B5BA17 /* AppDelegate.swift */; };
 		76DA8B901F30217F00B5BA17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76DA8B8F1F30217F00B5BA17 /* Assets.xcassets */; };
 		76DA8B931F30217F00B5BA17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76DA8B911F30217F00B5BA17 /* LaunchScreen.storyboard */; };
@@ -69,6 +72,9 @@
 		7470A0204B662C7E610F4D6F /* Pods-MLH.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLH.release.xcconfig"; path = "Pods/Target Support Files/Pods-MLH/Pods-MLH.release.xcconfig"; sourceTree = "<group>"; };
 		7601002F1F876D2F00A0AF48 /* MLHTVHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLHTVHeader.swift; sourceTree = "<group>"; };
 		760100311F876D6C00A0AF48 /* MLHTVHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MLHTVHeader.xib; sourceTree = "<group>"; };
+		760100341F87799D00A0AF48 /* MLHPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLHPlayerViewController.swift; sourceTree = "<group>"; };
+		760100371F877A7A00A0AF48 /* MLHWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLHWebViewController.swift; sourceTree = "<group>"; };
+		760100511F8AF3D700A0AF48 /* HUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
 		76DA8B851F30217F00B5BA17 /* MLH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MLH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76DA8B881F30217F00B5BA17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76DA8B8F1F30217F00B5BA17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -155,6 +161,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		760100331F8778D600A0AF48 /* PlayerVC */ = {
+			isa = PBXGroup;
+			children = (
+				760100341F87799D00A0AF48 /* MLHPlayerViewController.swift */,
+			);
+			path = PlayerVC;
+			sourceTree = "<group>";
+		};
+		760100361F877A6200A0AF48 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				760100371F877A7A00A0AF48 /* MLHWebViewController.swift */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
 		76DA8B7C1F30217F00B5BA17 = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +202,8 @@
 		76DA8B871F30217F00B5BA17 /* MLH */ = {
 			isa = PBXGroup;
 			children = (
+				760100361F877A6200A0AF48 /* WebView */,
+				760100331F8778D600A0AF48 /* PlayerVC */,
 				76DA8C1D1F30223700B5BA17 /* Utils */,
 				76DA8BF01F30223600B5BA17 /* Common */,
 				76DA8BFC1F30223700B5BA17 /* Find */,
@@ -362,6 +386,7 @@
 		76DA8C1D1F30223700B5BA17 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				760100511F8AF3D700A0AF48 /* HUD.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -566,6 +591,7 @@
 				76DA8C291F30223700B5BA17 /* MLHCorner.swift in Sources */,
 				76DA8C2A1F30223700B5BA17 /* Observable.swift in Sources */,
 				76DA8C311F30223700B5BA17 /* MLHFindViewController.swift in Sources */,
+				760100391F877A7A00A0AF48 /* MLHWebViewController.swift in Sources */,
 				76DA8C2C1F30223700B5BA17 /* SwifterSwift.swift in Sources */,
 				76DA8C301F30223700B5BA17 /* URIDefine.swift in Sources */,
 				76DA8C361F30223700B5BA17 /* MLHMeViewController.swift in Sources */,
@@ -578,8 +604,10 @@
 				76DA8C3A1F30223700B5BA17 /* MLHTestViewController.swift in Sources */,
 				76DA8C2D1F30223700B5BA17 /* UIColorExtension.swift in Sources */,
 				76DA8C281F30223700B5BA17 /* ImageTint.swift in Sources */,
+				760100351F87799D00A0AF48 /* MLHPlayerViewController.swift in Sources */,
 				76DA8C3D1F30223700B5BA17 /* MLHApiInterface.swift in Sources */,
 				76DA8C2E1F30223700B5BA17 /* UIViewControllerExtension.swift in Sources */,
+				760100521F8AF3D700A0AF48 /* HUD.swift in Sources */,
 				76DA8B891F30217F00B5BA17 /* AppDelegate.swift in Sources */,
 				76DA8C381F30223700B5BA17 /* MLHMainViewController.swift in Sources */,
 			);

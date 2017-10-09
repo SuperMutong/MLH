@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 class MLHBaseViewController: UIViewController,ViewControllerProtocol {
     var t:String?
     override func viewDidLoad() {

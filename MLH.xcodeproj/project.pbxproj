@@ -13,6 +13,8 @@
 		760100351F87799D00A0AF48 /* MLHPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760100341F87799D00A0AF48 /* MLHPlayerViewController.swift */; };
 		760100391F877A7A00A0AF48 /* MLHWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760100371F877A7A00A0AF48 /* MLHWebViewController.swift */; };
 		760100521F8AF3D700A0AF48 /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760100511F8AF3D700A0AF48 /* HUD.swift */; };
+		761951991FADBDBB003A3DBB /* MLHPlayerHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761951981FADBDBB003A3DBB /* MLHPlayerHeaderView.swift */; };
+		7619519B1FADBDC3003A3DBB /* MLHPlayerHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7619519A1FADBDC3003A3DBB /* MLHPlayerHeaderView.xib */; };
 		76DA8B891F30217F00B5BA17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DA8B881F30217F00B5BA17 /* AppDelegate.swift */; };
 		76DA8B901F30217F00B5BA17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76DA8B8F1F30217F00B5BA17 /* Assets.xcassets */; };
 		76DA8B931F30217F00B5BA17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76DA8B911F30217F00B5BA17 /* LaunchScreen.storyboard */; };
@@ -75,6 +77,8 @@
 		760100341F87799D00A0AF48 /* MLHPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLHPlayerViewController.swift; sourceTree = "<group>"; };
 		760100371F877A7A00A0AF48 /* MLHWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLHWebViewController.swift; sourceTree = "<group>"; };
 		760100511F8AF3D700A0AF48 /* HUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
+		761951981FADBDBB003A3DBB /* MLHPlayerHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLHPlayerHeaderView.swift; sourceTree = "<group>"; };
+		7619519A1FADBDC3003A3DBB /* MLHPlayerHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MLHPlayerHeaderView.xib; sourceTree = "<group>"; };
 		76DA8B851F30217F00B5BA17 /* MLH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MLH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76DA8B881F30217F00B5BA17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76DA8B8F1F30217F00B5BA17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -164,6 +168,8 @@
 		760100331F8778D600A0AF48 /* PlayerVC */ = {
 			isa = PBXGroup;
 			children = (
+				761951971FADBD78003A3DBB /* View */,
+				761951961FADBD78003A3DBB /* VM */,
 				760100341F87799D00A0AF48 /* MLHPlayerViewController.swift */,
 			);
 			path = PlayerVC;
@@ -175,6 +181,22 @@
 				760100371F877A7A00A0AF48 /* MLHWebViewController.swift */,
 			);
 			path = WebView;
+			sourceTree = "<group>";
+		};
+		761951961FADBD78003A3DBB /* VM */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VM;
+			sourceTree = "<group>";
+		};
+		761951971FADBD78003A3DBB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				761951981FADBDBB003A3DBB /* MLHPlayerHeaderView.swift */,
+				7619519A1FADBDC3003A3DBB /* MLHPlayerHeaderView.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		76DA8B7C1F30217F00B5BA17 = {
@@ -456,12 +478,14 @@
 		76DA8B7D1F30217F00B5BA17 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = MLH;
 				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = Haitang;
 				TargetAttributes = {
 					76DA8B841F30217F00B5BA17 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = SLMAEZYAP8;
 						ProvisioningStyle = Automatic;
 					};
 					76DA8B981F30217F00B5BA17 = {
@@ -507,6 +531,7 @@
 				76DA8B931F30217F00B5BA17 /* LaunchScreen.storyboard in Resources */,
 				76DA8C3F1F30223700B5BA17 /* MLHTVViewController.xib in Resources */,
 				76DA8B901F30217F00B5BA17 /* Assets.xcassets in Resources */,
+				7619519B1FADBDC3003A3DBB /* MLHPlayerHeaderView.xib in Resources */,
 				76DA8C371F30223700B5BA17 /* MLHMeViewController.xib in Resources */,
 				76DA8C321F30223700B5BA17 /* MLHFindViewController.xib in Resources */,
 				76DA8C391F30223700B5BA17 /* MLHMainViewController.xib in Resources */,
@@ -588,6 +613,7 @@
 				76DA8C261F30223700B5BA17 /* ArrayExtension.swift in Sources */,
 				76DA8C331F30223700B5BA17 /* MLHBaseViewController.swift in Sources */,
 				76DA8C341F30223700B5BA17 /* MLHNavigationViewController.swift in Sources */,
+				761951991FADBDBB003A3DBB /* MLHPlayerHeaderView.swift in Sources */,
 				76DA8C291F30223700B5BA17 /* MLHCorner.swift in Sources */,
 				76DA8C2A1F30223700B5BA17 /* Observable.swift in Sources */,
 				76DA8C311F30223700B5BA17 /* MLHFindViewController.swift in Sources */,
@@ -753,10 +779,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 30B40B92290EB53C4BDEE212 /* Pods-MLH.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = SLMAEZYAP8;
 				INFOPLIST_FILE = MLH/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = zuoyebang.MLH;
+				PRODUCT_BUNDLE_IDENTIFIER = com.baidu.homework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/litianpeng/Desktop/MLH/MLH/MLH-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
@@ -767,10 +794,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7470A0204B662C7E610F4D6F /* Pods-MLH.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = SLMAEZYAP8;
 				INFOPLIST_FILE = MLH/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = zuoyebang.MLH;
+				PRODUCT_BUNDLE_IDENTIFIER = com.baidu.homework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/litianpeng/Desktop/MLH/MLH/MLH-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;

@@ -7,6 +7,8 @@
 //
 
 import Foundation
-let requestURLHeader:String = "https://magicapi.vmovier.cc/magicapiv2/"
-let findmagictv:String = "find/magictv"
+//let requestURLHeader:String = "https://magicapi.vmovier.cc/magicapiv2/"
+//let findmagictv:String = "find/magictv"
 
+let requestURLHeader:String = "https://api.veilpark.com/"
+let findmagictv:String = "users/male/viewFemaleContact"

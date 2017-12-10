@@ -12,4 +12,5 @@
 #import <MBProgressHUD/MBProgressHUD.h>
 #import <MJRefresh/MJRefresh.h>
 #import <YYKit/YYKit.h>
+#import <ZFPlayer/ZFPlayer.h>
 #endif /* MLH_Bridging_Header_h */

@@ -15,7 +15,12 @@ struct HTTPFacade {
  
  
     func loadMagicTVData(params:[String:Any],finished:@escaping CompleteBlock)  {
-        self.doHttpRequest(params: params, url: findmagictv, completeBlock: finished)
+       let newparams = ["femaleId":"859365",
+                    "mid":"1859060b90ec4f3624adbdf158fa577097319599",
+                  "cversion":"4300",
+                  "client":"ios",
+                      "Authorization":"token 9428b40ab2f34063a8f50a0b1d919973jacmpr1e"]
+        self.doHttpRequest(params: newparams, url: findmagictv, completeBlock: finished)
     
     }
     

@@ -9,8 +9,7 @@
 
 import Foundation
 import UIKit
-
-let KScreenWidth = UIScreen.main.bounds.width
+ let KScreenWidth = UIScreen.main.bounds.width
 let KScreenHeight = UIScreen.main.bounds.height
 let KeyWindow = UIApplication.shared.keyWindow
 let AppDelegateInstance:AppDelegate = (UIApplication.shared.delegate) as! AppDelegate

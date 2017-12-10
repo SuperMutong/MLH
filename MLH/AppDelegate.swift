@@ -16,7 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
+        let webview:UIWebView = UIWebView(frame: CGRect.zero)
+        let oldAgent = webview.stringByEvaluatingJavaScript(from: "navigator.userAgent")
+        let newAgent = oldAgent! + "maskpark/4.3 (iPhone; iOS 11.1.2; Scale/2.00)"
+        let dic = ["UserAgent":newAgent]
+        UserDefaults.standard.register(defaults: dic)
        
         window = UIWindow(frame: UIScreen.main.bounds)
         let tabbar = MLHTabBarViewController()

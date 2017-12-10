@@ -22,6 +22,7 @@ class MLHTVVM {
     func loadTVData() {
      
         HTTPFacade.shareInstance.loadMagicTVData(params:["lastid":"0"]) {[weak self] (response) in
+            print(response)
             switch response.result {
             case .success(let value):
                 let whc = MLHFindMagicTV.deserialize(from: value as? NSDictionary)

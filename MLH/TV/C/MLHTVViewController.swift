@@ -9,6 +9,7 @@
 import UIKit
 import MJRefresh
 import MBProgressHUD
+//B2
 class MLHTVViewController: MLHBaseViewController {
     var VM:MLHTVVM = MLHTVVM()
     var tableView:UITableView = {
